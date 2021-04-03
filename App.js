@@ -13,7 +13,6 @@ import { AntDesign, Entypo, FontAwesome5 } from "@expo/vector-icons";
 import { NeuButton, NeuView } from "react-native-neu-element";
 import { Component } from "react";
 
-//color
 const gray = "#919492";
 const pppink = "#fdbaf5";
 const wWidth = Dimensions.get("window").width;
