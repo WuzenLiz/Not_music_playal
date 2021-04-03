@@ -11,13 +11,13 @@ import {
 } from "react-native";
 import { AntDesign, Entypo, FontAwesome5 } from "@expo/vector-icons";
 import { NeuButton, NeuView } from "react-native-neu-element";
+import SongContainer from "./components/SongContainer";
 
 const gray = "#919492";
 const pppink = "#fdbaf5";
 const wWidth = Dimensions.get("window").width;
 
-export default class App extends React.Component {
-  render();
+export default function App() {
   return (
     <View style={styles.container}>
       <SafeAreaView style={{ alignSelf: "stretch" }}>
@@ -34,23 +34,11 @@ export default class App extends React.Component {
               <Entypo name="menu" size={24} color={gray} />
             </NeuButton>
           </View>
-          <View style={styles.songArtContainer}>
-            <NeuView
-              color="#424655"
-              width={wWidth / 1.75}
-              height={wWidth / 1.75}
-              borderRadius={150}
-            >
-              <Image
-                source={require("./assets/image.jpg")}
-                style={styles.songArt}
-              />
-            </NeuView>
-          </View>
-          <View style={styles.songContainer}>
-            <Text style={styles.title}>SONG NAME</Text>
-            <Text style={styles.artist}>Artist</Text>
-          </View>
+          <SongContainer
+            image={"./assets/image.jpg"}
+            title={"Song title"}
+            artist={"artist"}
+          />
           <View style={styles.trackContainer}>
             <View
               style={{ flexDirection: "row", justifyContent: "space-between" }}
@@ -111,31 +99,6 @@ const styles = StyleSheet.create({
   playing: {
     color: gray,
     fontWeight: "800",
-  },
-  songArtContainer: {
-    marginVertical: 32,
-    alignItems: "center",
-  },
-  songArt: {
-    width: wWidth / 1.75,
-    height: wWidth / 1.75,
-    borderRadius: 150,
-    borderColor: "#424655",
-    borderWidth: 5,
-  },
-  songContainer: {
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 30,
-    color: "#6c7a93",
-    fontWeight: "300",
-  },
-  artist: {
-    fontSize: 13,
-    marginTop: 8,
-    color: gray,
-    fontWeight: "500",
   },
   trackContainer: {
     marginTop: 32,
