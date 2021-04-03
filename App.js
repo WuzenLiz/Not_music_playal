@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { Component } from "react";
 import {
   SafeAreaView,
   StyleSheet,
@@ -11,13 +11,13 @@ import {
 } from "react-native";
 import { AntDesign, Entypo, FontAwesome5 } from "@expo/vector-icons";
 import { NeuButton, NeuView } from "react-native-neu-element";
-import { Component } from "react";
 
 const gray = "#919492";
 const pppink = "#fdbaf5";
 const wWidth = Dimensions.get("window").width;
 
-export default function App() {
+export default class App extends React.Component {
+  render();
   return (
     <View style={styles.container}>
       <SafeAreaView style={{ alignSelf: "stretch" }}>
